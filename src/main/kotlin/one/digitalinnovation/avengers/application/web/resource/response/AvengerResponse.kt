@@ -1,4 +1,4 @@
-package one.digitalinnovation.avengers.application.web.response
+package one.digitalinnovation.avengers.application.web.resource.response
 
 data class AvengerResponse(
     val nick: String,
