@@ -17,7 +17,23 @@ data class AvengerRequest(
     val description: String? = "",
     val history: String? = ""
 ) {
-    fun toAvenger() = Avenger(nick, person, description, history)
+    fun toAvenger() = Avenger(
+        nick = nick,
+        person = person,
+        description = description,
+        history = history
+    )
+
+    companion object {
+        fun to(id: Long?, request: AvengerRequest) = Avenger(
+            id = id,
+            nick = request.nick,
+            person = request.person,
+            description = request.description,
+            history = request.history
+
+        )
+    }
 }
 
 
