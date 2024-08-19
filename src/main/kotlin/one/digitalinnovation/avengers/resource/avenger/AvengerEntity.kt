@@ -1,14 +1,11 @@
 package one.digitalinnovation.avengers.resource.avenger
 
-import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.*
 import one.digitalinnovation.avengers.domain.avenger.Avenger
 
 
 @Entity
+@Table(name = "avenger")
 data class AvengerEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
